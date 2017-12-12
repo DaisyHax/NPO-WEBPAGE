@@ -1,0 +1,86 @@
+body
+{
+	background-image: url(bg3.jpg);
+	text-align: center;
+	width:100%;
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	background-repeat: repeat-y;
+	background-position: center;
+	background-attachment: fixed;
+}
+.container
+{
+	text-align: center;
+
+}
+#heading h1
+{
+	font: bold 39px Tahoma;
+	color:white;
+	border:5px solid grey;
+	margin:30px;
+	padding :10px;
+	text-align: center;
+
+}
+#jumbohead
+{
+	font-size: 40px;
+}
+#heading h2
+{
+	font: italic 17px Tahoma;
+	color:white;
+	padding-bottom: 10px;
+}
+#sliding
+{
+	padding:20px;
+	margin-top:30px;
+}
+#contents
+{
+	border:2px solid grey;
+	margin-top:20px;
+	background-color: white;
+	padding:20px;
+	margin:10px;
+}
+#footers
+{
+	border-top:2px solid grey;
+	border-width: 100%;
+	text-align: center;
+	margin:20px;
+	background-color:#302B29;
+	color: white;
+}
+.container
+{
+	background-color: #302B29;
+
+}
+#cards
+{
+	margin-left: 10px;
+}
+#fornav
+{
+	background-color: #2F333D;
+}
+#logsign
+{
+	margin-top: 10px;
+	
+}
+#logsign2
+{
+	margin-top: 18px;
+	
+}
+#fornav
+{
+	padding-left:5px;
+	padding-right: 20px; 
+}
