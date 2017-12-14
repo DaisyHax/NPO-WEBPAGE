@@ -16,9 +16,9 @@
 			</div>
 		</div>
 
-		<div class="row" id="fornav" >
-			<div class="col-10" >
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+				<div class="row" id="fornav" >
+			<div class="col-12" >
+			<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #2F333D;" >
 			  <a class="navbar-brand" href="#"></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -59,20 +59,71 @@
 			      </li>
 
 			    </ul>
-			    <form class="form-inline my-2 my-lg-0">
-			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			    <form class="form-inline my-2 my-lg-0" >
+			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
+			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color:white;">Search</button>
+
+			      <div  id="logsign" class="nav-item">
+
+					<a class="nav-link btn btn-dark" data-toggle="modal" data-target="#exampleModal" style="color:white;">Log In</a>
+
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">Signing in?</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        <p>Click Yes to go to Log In page.</p>
+					        <p>Click No to go back.</p>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+					        <a class="nav-link" href="login.html"><button type="button" class="btn btn-primary">Yes</button></a>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				</div>
+				<div  id="logsign2">
+
+					<a class="nav-link btn btn-dark" data-toggle="modal" data-target="#exampleModal1" style="color:white;">Sign Up</a>
+
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">Mot a member yet?</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        <p>Click Sign Up Now! to become a member for free!</p>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+					        <a class="nav-link" href="register.html"><button type="button" class="btn btn-primary">Sign Up Now!</button></a>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				</div>
+
+
+
 			    </form>
 			</div>
 			</nav>
 		</div>
-		<div class="col-md-1 col-sm-3" id="logsign">
-			<a class="nav-link" href="login.html"><button type="button" class="btn btn-dark" data-toggle="popover" title="Sign In!" data-content="Already a member? Sign in here!" >Log In</button></a>
-		</div>
-		<div class="col-md-1 col-sm-3" id="logsign2">
-			<button type="button" class="btn btn-dark" data-toggle="popover" title="Sign Up" data-content="Not a part of NPO yet? Come join us. Nature Protection is now one step ahead! Click here to sign up.">Sign Up</button>
-
-		</div>
+		
 		</div>
 
 		<div class="row" id="sliding">

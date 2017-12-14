@@ -18,8 +18,8 @@
 		</div>
 
 		<div class="row" id="fornav" >
-			<div class="col-10" >
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+			<div class="col-12" >
+			<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #2F333D;" >
 			  <a class="navbar-brand" href="#"></a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -60,20 +60,77 @@
 			      </li>
 
 			    </ul>
-			    <form class="form-inline my-2 my-lg-0">
-			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			    <form class="form-inline my-2 my-lg-0" >
+
+			      <div  id="logsign" class="nav-item">
+					<a class="nav-link btn btn-dark" data-toggle="modal" data-target="#exampleModal" style="color:white;" id="login">Log In</a>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">Signing in?</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        <p>Click Yes to go to Log In page.</p>
+					        <p>Click No to go back.</p>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+					        <a class="nav-link" href="login.html"><button type="button" class="btn btn-primary">Yes</button></a>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				</div>
+
+				<div  id="logsout" class="nav-item">
+					<li class="nav-item dropdown">
+			   <a class="nav-link dropdown-toggle" href="#" id="namedropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+			          <a class="dropdown-item nav-link" href="#" onclick="logout()" id="logout">Log Out</a>
+			      </li>
+
+				</div>
+
+				<div  id="logsign2">
+
+					<a class="nav-link btn btn-dark" data-toggle="modal" data-target="#exampleModal1" style="color:white;">Sign Up</a>
+
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					  <div class="modal-dialog" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">Mot a member yet?</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        <p>Click Sign Up Now! to become a member for free!</p>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+					        <a class="nav-link" href="register.html"><button type="button" class="btn btn-primary">Sign Up Now!</button></a>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				</div>
+
+
+
 			    </form>
 			</div>
 			</nav>
 		</div>
-		<div class="col-md-1 col-sm-3" id="logsign">
-			<a class="nav-link" href="login.html"><button type="button" class="btn btn-dark" data-toggle="popover" title="Sign In!" data-content="Already a member? Sign in here!" >Log In</button></a>
-		</div>
-		<div class="col-md-1 col-sm-3" id="logsign2">
-			<button type="button" class="btn btn-dark" data-toggle="popover" title="Sign Up" data-content="Not a part of NPO yet? Come join us. Nature Protection is now one step ahead! Click here to sign up.">Sign Up</button>
-
-		</div>
+		
 		</div>
 
 		<div class="row" id="sliding">
@@ -158,30 +215,31 @@
 		<div class="row" id="cards">
 			<div class="col-sm-12 col-md-4 ">
 				<div class="card" style="width: 20rem;">
-				  <img class="card-img-top" src="6.jpg" alt="Card image cap">
+				  <img class="card-img-top" src="6.jpg" alt="Card image cap" id="panda1">
 				  <div class="card-body">
-				    <h4 class="card-title">Save Pandas</h4>
-				    <p class="card-text">The giant panda, also known as panda bear or simply panda, is a bear native to south central China. It is easily recognized by the large, distinctive black patches around its eyes, over the ears, and across its round body.</p>
+				    <h4 class="card-title" id="pandahead">Save Pandas</h4>
+				    <p class="card-text" id="pandatext">The giant panda, also known as panda bear or simply panda, is a bear native to south central China. It is easily recognized by the large, distinctive black patches around its eyes, over the ears, and across its round body.</p>
 				    <a href="panda.html" class="btn btn-primary">Help Them !</a>
+				    
 				  </div>
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-4 ">
 				<div class="card" style="width: 20rem;">
-				  <img class="card-img-top" src="7.jpg" alt="Card image cap">
+				  <img class="card-img-top" src="7.jpg" alt="Card image cap" id="tiger">
 				  <div class="card-body">
-				    <h4 class="card-title">White Tigers Face Extinction!</h4>
-				    <p class="card-text">It is estimated that there are 4,500 to 7,500 snow leopards living in the mountains of central Asia. It is believed that 60% of the entire population of snow leopards live in China.</p>
+				    <h4 class="card-title" id="tigerhead">White Tigers Face Extinction!</h4>
+				    <p class="card-text" id="tigertext">It is estimated that there are 4,500 to 7,500 snow leopards living in the mountains of central Asia. It is believed that 60% of the entire population of snow leopards live in China.</p>
 				    <a href="leopard.html" class="btn btn-primary">Read More...</a>
 				  </div>
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-4 ">
 				<div class="card" style="width: 20rem;">
-				  <img class="card-img-top" src="4.jpg" alt="Card image cap">
+				  <img class="card-img-top" src="4.jpg" alt="Card image cap" id="nature">
 				  <div class="card-body">
-				    <h4 class="card-title">Beauty In Nature</h4>
-				    <p class="card-text">Nature, in the broadest sense, is the natural, physical, or material world or universe. "Nature" can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large part of science.Explore some of the most serene natural hubs around the world.</p>
+				    <h4 class="card-title" id="naturehead">Beauty In Nature</h4>
+				    <p class="card-text" id="naturetext">Nature, in the broadest sense, is the natural, physical, or material world or universe. "Nature" can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large part of science.Explore some of the most serene natural hubs around the world.</p>
 				    <a href="https://www.iucn.org/regions/europe/projects/world-environmental-hubs" class="btn btn-primary">Explore Now!</a>
 				  </div>
 				</div>
@@ -197,6 +255,9 @@
 				  <p>World Health Statistics 2017: Monitoring health for the SDGs</p>
 				  <p class="lead">
 				    <a class="btn btn-primary btn-lg" href="http://www.who.int/sdg/en/" role="button">Learn more</a>
+				    <!--  Trying out events in JS
+				    <button onclick="hi()">Change Image</button>
+				`	-->
 				  </p>
 				</div>
 			</section>
@@ -211,6 +272,92 @@
 		</div>
 
 	</div>
+	<!--<script>
+		function hi()
+		{
+			document.getElementById("panda1").src="3.jpg";
+		}
+	</script>-->
+
+	<script type="text/javascript">//call back func runs after the file is read completely
+
+		function logout()
+		{
+			var out=localStorage.getItem("signedin");
+			out=0;
+			localStorage.setItem("signedin",out);
+
+		}
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() //CALLBACK FUNCTION
+			{
+				if(this.readyState == 4 && this.status == 200) // 2xx are success code, 4xx are failure codes in http
+				{
+					console.log(this.responseText);
+					var a=this.responseText;
+					var c=JSON.parse(a);
+
+					document.getElementById("panda1").src =c[0].imageUrl;
+					document.getElementById("tiger").src =c[1].imageUrl;
+					document.getElementById("nature").src =c[2].imageUrl;
+					document.getElementById("pandatext").innerHTML =c[0].content;
+					document.getElementById("tigertext").innerHTML =c[1].content;
+					document.getElementById("naturetext").innerHTML =c[2].content;
+					document.getElementById("pandahead").innerHTML =c[0].title;
+					document.getElementById("tigerhead").innerHTML =c[1].title;
+					document.getElementById("naturehead").innerHTML =c[2].title;
+					
+				}
+				var flag=localStorage.getItem("signedin");
+				var name=localStorage.getItem("name");
+				if(flag==1)
+				{
+					document.getElementById("logsign").style="display:none";
+					console.log(name);	
+					document.getElementById("namedropdown").innerHTML=name;
+					document.getElementById("logsout").style=" ";
+				}
+				if(flag==0)
+				{
+					document.getElementById("logsout").style="display:none";
+					document.getElementById("logsign").style=" ";
+					document.getElementById("namedropdown").innerHTML="";
+				}
+			};
+			console.log(xhttp.open("GET","http://koushikmln.com:7500/blogs",true));
+
+			//console.log(xhttp.open("POST","http://koushikmln.com/blogs/getBlog",true));
+			
+			xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");  // since we r sending encoded url
+			xhttp.send();
+
+	</script>
+	
+	<!--   <script type="text/javascript">//call back func runs after the file is read completely
+/*
+			var xhttp1 = new XMLHttpRequest();
+			xhttp1.onreadystatechange = function() //CALLBACK FUNCTION
+			{
+				if(this.readyState == 4 && this.status == 200) // 2xx are success code, 4xx are failure codes in http
+				{
+					console.log(this.responseText);
+					var a=this.responseText;
+					var c=JSON.parse(a);
+
+					
+				}
+				
+			};
+			//console.log(xhttp.open("GET","http://koushikmln.com:7500/blogs",true));
+
+			console.log(xhttp1.open("POST","http://koushikmln.com/blogs/getBlog",true));
+			
+			xhttp.setRequestHeader("Content-type","application/json");  // since we r sending encoded url
+			xhttp.send();
+			*/
+	</script>  -->
+
 	<!--these scripts are for bootstrap-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
