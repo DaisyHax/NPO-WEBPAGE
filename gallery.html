@@ -61,13 +61,9 @@
 
 			    </ul>
 			    <form class="form-inline my-2 my-lg-0" >
-			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
-			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color:white;">Search</button>
 
 			      <div  id="logsign" class="nav-item">
-
-					<a class="nav-link btn btn-dark" data-toggle="modal" data-target="#exampleModal" style="color:white;">Log In</a>
-
+					<a class="nav-link btn btn-dark" data-toggle="modal" data-target="#exampleModal" style="color:white;" id="login">Log In</a>
 					<!-- Modal -->
 					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					  <div class="modal-dialog" role="document">
@@ -91,6 +87,16 @@
 					</div>
 
 				</div>
+
+				<div  id="logsout" class="nav-item" style="display:none;">
+					<li class="nav-item dropdown">
+			   <a class="nav-link dropdown-toggle" href="#" id="namedropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+			          <a class="dropdown-item nav-link" href="#" onclick="logout()" id="logout">Log Out</a>
+			      </li>
+
+				</div>
+
 				<div  id="logsign2">
 
 					<a class="nav-link btn btn-dark" data-toggle="modal" data-target="#exampleModal1" style="color:white;">Sign Up</a>
@@ -217,6 +223,44 @@
 		</div>
 
 	</div>
+
+	<script type="text/javascript">//call back func runs after the file is read completely
+
+		function logout()
+		{
+			var out=localStorage.getItem("signedin");
+			out=0;
+			localStorage.setItem("signedin",out);
+
+		}
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() //CALLBACK FUNCTION
+			{
+				var flag=localStorage.getItem("signedin");
+				var name=localStorage.getItem("name");
+				if(flag==1)
+				{
+					document.getElementById("logsign").style="display:none";
+					console.log(name);	
+					document.getElementById("namedropdown").innerHTML=name;
+					document.getElementById("logsout").style="";
+					document.getElementById("logsign2").style="display:none";
+				}
+				if(flag==0)
+				{
+					document.getElementById("logsout").style="display:none";
+					document.getElementById("logsign").style="";
+					document.getElementById("namedropdown").innerHTML="";
+					document.getElementById("logsign2").style="";
+				}
+			};
+			xhttp.open("GET","http://koushikmln.com:7500/blogs",true)
+			xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");  // since we r sending encoded url
+			xhttp.send();
+
+	</script>
+
 	<!--these scripts are for bootstrap-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

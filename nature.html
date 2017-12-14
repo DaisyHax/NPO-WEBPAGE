@@ -88,7 +88,7 @@
 
 				</div>
 
-				<div  id="logsout" class="nav-item">
+				<div  id="logsout" class="nav-item" style="display:none;">
 					<li class="nav-item dropdown">
 			   <a class="nav-link dropdown-toggle" href="#" id="namedropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
@@ -290,6 +290,8 @@
 		}
 
 			var xhttp = new XMLHttpRequest();
+			var xhttp1 = new XMLHttpRequest();
+			
 			xhttp.onreadystatechange = function() //CALLBACK FUNCTION
 			{
 				if(this.readyState == 4 && this.status == 200) // 2xx are success code, 4xx are failure codes in http
@@ -317,20 +319,61 @@
 					console.log(name);	
 					document.getElementById("namedropdown").innerHTML=name;
 					document.getElementById("logsout").style=" ";
+					document.getElementById("logsign2").style="display:none";
 				}
 				if(flag==0)
 				{
 					document.getElementById("logsout").style="display:none";
 					document.getElementById("logsign").style=" ";
 					document.getElementById("namedropdown").innerHTML="";
+					document.getElementById("logsign2").style="";
 				}
 			};
-			console.log(xhttp.open("GET","http://koushikmln.com:7500/blogs",true));
 
-			//console.log(xhttp.open("POST","http://koushikmln.com/blogs/getBlog",true));
-			
+				
+			/*xhttp1.onreadystatechange = function() //CALLBACK FUNCTION
+			{
+
+
+				if(this.readyState == 4 && this.status == 200) // 2xx are success code, 4xx are failure codes in http
+				{
+					alert(this.responseText);
+					console.log(this.responseText);
+					//var a=this.responseText;
+					//var c=JSON.parse(a);
+					
+				}
+			};*/
+			console.log(xhttp.open("GET","http://koushikmln.com:7500/blogs",true));
 			xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");  // since we r sending encoded url
 			xhttp.send();
+
+			/*console.log(xhttp1.open("POST","http://koushikmln.com:7500/blogs/getBlog",true));
+			xhttp1.setRequestHeader("Content-type","application/x-www-form-urlencoded");  // since we r sending encoded url
+			xhttp1.send("blogId=11124");*/
+			
+
+
+			//from this point- pasted from postman app
+			var data = JSON.stringify({"blogId": 11124});
+
+			var xhr = new XMLHttpRequest();
+			//xhr.withCredentials = true;   // no need
+
+			xhr.addEventListener("readystatechange", function () {
+			  if (this.readyState === 4) {
+			    console.log(this.responseText);
+			  }
+			});
+
+			xhr.open("POST", "http://koushikmln.com:7500/blogs/getBlog");
+			xhr.setRequestHeader("content-type", "application/json"); 
+			//xhr.setRequestHeader("cache-control", "no-cache");                                //no need
+			//xhr.setRequestHeader("postman-token", "eec2373e-59f0-7c42-f397-776d9b495b98");    // no need
+
+			xhr.send(data);
+
+			//till this point
 
 	</script>
 	
