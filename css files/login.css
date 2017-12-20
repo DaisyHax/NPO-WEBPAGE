@@ -1,6 +1,6 @@
 body
 {
-	background-image: url(bg3.jpg);
+	background-image: url("/home/dishi/Dishi/Web Dev/codeasylums/NPO/NPO-WEBPAGE/Images/bg3.jpg");
 	text-align: center;
 	width:100%;
 	display:-webkit-box;
@@ -11,6 +11,7 @@ body
 }
 .container
 {
+	background-color: #302B29;
 	text-align: center;
 
 }
@@ -34,11 +35,7 @@ body
 	color:white;
 	padding-bottom: 10px;
 }
-#sliding
-{
-	padding:20px;
-	margin-top:30px;
-}
+
 #contents
 {
 	border:2px solid grey;
@@ -56,11 +53,6 @@ body
 	background-color:#302B29;
 	color: white;
 }
-.container
-{
-	background-color: #302B29;
-
-}
 #cards
 {
 	margin-left: 10px;
@@ -68,21 +60,12 @@ body
 #fornav
 {
 	background-color: #2F333D;
+	padding-left:5px;
+	padding-right:5px;
 }
 #logsign
 {
 	margin: 10px;
 	margin-left:20px;
-	
-}
-#logsout
-{
-	margin: 10px;
-	margin-left:20px;
-	
-}
-#fornav
-{
-	padding-left:5px;
-	padding-right: 5px; 
+
 }

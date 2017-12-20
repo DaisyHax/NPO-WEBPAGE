@@ -1,6 +1,6 @@
 body
 {
-	background-image: url(bg3.jpg);
+	background-image: url("/home/dishi/Dishi/Web Dev/codeasylums/NPO/NPO-WEBPAGE/Images/bg3.jpg");
 	text-align: center;
 	width:100%;
 	display:-webkit-box;
@@ -12,16 +12,13 @@ body
 .container
 {
 	text-align: center;
-}
-#heading
-{
-	border-bottom:10px solid grey;
-	
+
 }
 #heading h1
 {
-	font: bold 42px Tahoma;
+	font: bold 39px Tahoma;
 	color:white;
+	border:5px solid grey;
 	margin:30px;
 	padding :10px;
 	text-align: center;
@@ -30,7 +27,6 @@ body
 #jumbohead
 {
 	font-size: 40px;
-	color:blue;
 }
 #heading h2
 {
@@ -65,19 +61,28 @@ body
 	background-color: #302B29;
 
 }
+#cards
+{
+	margin-left: 10px;
+}
 #fornav
 {
 	background-color: #2F333D;
-	padding-left:5px;
-	padding-right: 20px; 
 }
 #logsign
 {
-	margin-top: 10px;
-	
+	margin: 10px;
+	margin-left:20px;
+
 }
-#logsign2
+#logsout
 {
-	margin-top: 10px;
-	
+	margin: 10px;
+	margin-left:20px;
+
+}
+#fornav
+{
+	padding-left:5px;
+	padding-right: 5px;
 }

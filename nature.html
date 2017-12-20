@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Nature Protection Organisation Homepage</title>
-	<link rel="stylesheet" href="nso.css">
+	<link rel="stylesheet" href="css files/nso.css">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">     <!--to remove incompatibility of the browser-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">     <!-- for boot strap-->
@@ -30,7 +30,7 @@
 			      <li class="nav-item active">
 			        <a class="nav-link" href="nature.html">Home <span class="sr-only">(current)</span></a>
 			      </li>
-			      
+
 			      <li class="nav-item">
 			        <a class="nav-link" href="npo.html">What is NPO?</a>
 			      </li>
@@ -130,7 +130,7 @@
 			</div>
 			</nav>
 		</div>
-		
+
 		</div>
 
 		<div class="row" id="sliding">
@@ -149,49 +149,49 @@
 			  </ol>
 			  <div class="carousel-inner" role="listbox" style=" width:100%; min-height:450px; max-height:480px;">
 			    <div class="carousel-item active">
-			      <img class="d-block w-100" src="1.jpg" alt="First slide">
+			      <img class="d-block w-100" src="/home/dishi/Dishi/Web Dev/codeasylums/NPO/NPO-WEBPAGE/Images/1.jpg" alt="First slide">
 			      <div class="carousel-caption d-none d-md-block ">
 				    <h3 style="color:black; font:bold 32px tahoma">wow</h3>
 				    <p>enjoy</p>
 				  </div>
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" src="2.jpg" alt="Second slide">
+			      <img class="d-block w-100" src="/home/dishi/Dishi/Web Dev/codeasylums/NPO/NPO-WEBPAGE/Images/2.jpg" alt="Second slide">
 			      <div class="carousel-caption d-none d-md-block">
 				    <h3>wow</h3>
 				    <p>enjoy</p>
 				  </div>
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" src="3.jpg" alt="Third slide">
+			      <img class="d-block w-100" src="/home/dishi/Dishi/Web Dev/codeasylums/NPO/NPO-WEBPAGE/Images/3.jpg" alt="Third slide">
 			      <div class="carousel-caption d-none d-md-block">
 				    <h3>wow</h3>
 				    <p>enjoy</p>
 				  </div>
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" src="4.jpg" alt="Fourth slide">
+			      <img class="d-block w-100" src="/home/dishi/Dishi/Web Dev/codeasylums/NPO/NPO-WEBPAGE/Images/4.jpg" alt="Fourth slide">
 			      <div class="carousel-caption d-none d-md-block">
 				    <h3>wow</h3>
 				    <p>enjoy</p>
 				  </div>
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" src="5.jpg" alt="Fifth slide">
+			      <img class="d-block w-100" src="/home/dishi/Dishi/Web Dev/codeasylums/NPO/NPO-WEBPAGE/Images/5.jpg" alt="Fifth slide">
 			      <div class="carousel-caption d-none d-md-block">
 				    <h3>wow</h3>
 				    <p>enjoy</p>
 				  </div>
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" src="6.jpg" alt="Sixth slide">
+			      <img class="d-block w-100" src="/home/dishi/Dishi/Web Dev/codeasylums/NPO/NPO-WEBPAGE/Images/6.jpg" alt="Sixth slide">
 			      <div class="carousel-caption d-none d-md-block">
 				    <h3>wow</h3>
 				    <p>enjoy</p>
 				  </div>
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" src="7.jpg" alt="Seventh slide">
+			      <img class="d-block w-100" src="/home/dishi/Dishi/Web Dev/codeasylums/NPO/NPO-WEBPAGE/Images/7.jpg" alt="Seventh slide">
 			      <div class="carousel-caption d-none d-md-block">
 				    <h3>wow</h3>
 				    <p>enjoy</p>
@@ -220,7 +220,7 @@
 				    <h4 class="card-title" id="pandahead">Save Pandas</h4>
 				    <p class="card-text" id="pandatext">The giant panda, also known as panda bear or simply panda, is a bear native to south central China. It is easily recognized by the large, distinctive black patches around its eyes, over the ears, and across its round body.</p>
 				    <a href="panda.html" class="btn btn-primary">Help Them !</a>
-				    
+
 				  </div>
 				</div>
 			</div>
@@ -291,7 +291,7 @@
 
 			var xhttp = new XMLHttpRequest();
 			var xhttp1 = new XMLHttpRequest();
-			
+
 			xhttp.onreadystatechange = function() //CALLBACK FUNCTION
 			{
 				if(this.readyState == 4 && this.status == 200) // 2xx are success code, 4xx are failure codes in http
@@ -309,14 +309,14 @@
 					document.getElementById("pandahead").innerHTML =c[0].title;
 					document.getElementById("tigerhead").innerHTML =c[1].title;
 					document.getElementById("naturehead").innerHTML =c[2].title;
-					
+
 				}
 				var flag=localStorage.getItem("signedin");
 				var name=localStorage.getItem("name");
 				if(flag==1)
 				{
 					document.getElementById("logsign").style="display:none";
-					console.log(name);	
+					console.log(name);
 					document.getElementById("namedropdown").innerHTML=name;
 					document.getElementById("logsout").style=" ";
 					document.getElementById("logsign2").style="display:none";
@@ -330,7 +330,7 @@
 				}
 			};
 
-				
+
 			/*xhttp1.onreadystatechange = function() //CALLBACK FUNCTION
 			{
 
@@ -341,7 +341,7 @@
 					console.log(this.responseText);
 					//var a=this.responseText;
 					//var c=JSON.parse(a);
-					
+
 				}
 			};*/
 			console.log(xhttp.open("GET","http://koushikmln.com:7500/blogs",true));
@@ -351,7 +351,7 @@
 			/*console.log(xhttp1.open("POST","http://koushikmln.com:7500/blogs/getBlog",true));
 			xhttp1.setRequestHeader("Content-type","application/x-www-form-urlencoded");  // since we r sending encoded url
 			xhttp1.send("blogId=11124");*/
-			
+
 
 
 			//from this point- pasted from postman app
@@ -367,7 +367,7 @@
 			});
 
 			xhr.open("POST", "http://koushikmln.com:7500/blogs/getBlog");
-			xhr.setRequestHeader("content-type", "application/json"); 
+			xhr.setRequestHeader("content-type", "application/json");
 			//xhr.setRequestHeader("cache-control", "no-cache");                                //no need
 			//xhr.setRequestHeader("postman-token", "eec2373e-59f0-7c42-f397-776d9b495b98");    // no need
 
@@ -376,7 +376,7 @@
 			//till this point
 
 	</script>
-	
+
 	<!--   <script type="text/javascript">//call back func runs after the file is read completely
 /*
 			var xhttp1 = new XMLHttpRequest();
@@ -388,14 +388,14 @@
 					var a=this.responseText;
 					var c=JSON.parse(a);
 
-					
+
 				}
-				
+
 			};
 			//console.log(xhttp.open("GET","http://koushikmln.com:7500/blogs",true));
 
 			console.log(xhttp1.open("POST","http://koushikmln.com/blogs/getBlog",true));
-			
+
 			xhttp.setRequestHeader("Content-type","application/json");  // since we r sending encoded url
 			xhttp.send();
 			*/
